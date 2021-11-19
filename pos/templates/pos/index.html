@@ -1,0 +1,55 @@
+{#{% extends 'base.html' %}#}
+{##}
+{#{% block title %}CRM{% endblock %}#}
+{##}
+{#{% block extra-head %}#}
+{##}
+{#{% endblock %}#}
+{##}
+{#{% block content %}#}
+{#<div id="app">#}
+{#    <h1>매장 정보 검색</h1>#}
+{#    <input type="text" placeholder="Enter the Shop name" class="name"#}
+{#        v-model.trim="name">#}
+{#    <button>Search</button>#}
+{##}
+{#    [[ vm ]]#}
+{#    <br>#}
+{##}
+{#    <ul v-for="(shop, index) in shops">#}
+{#        <li>가게 이름: [[ shop.name ]]</li>#}
+{#        <li>지점장 : [[ shop.boss ]]</li>#}
+{#        <li>가게 전화번호 :[[ shop.boss ]]</li>#}
+{#    </ul>#}
+{#</div>#}
+{##}
+{#{% endblock %}#}
+{##}
+{#{% block extra-script %}#}
+{#    <script src="https://unpkg.com/vue@next"></script>#}
+{#    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>#}
+{#{% load static %}#}
+{#    <script src="{% static 'pos/scripts.js' %}"></script>#}
+{#{% endblock %}#}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JPOS</title>
+
+</head>
+<body>
+    <div id="app">
+        <h1>Shops</h1>
+        [[ vm ]]
+    </div>
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{% static 'pos/scripts.js' %}"></script>
+</body>
+</html>
